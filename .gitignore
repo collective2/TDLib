@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/TDLib/.vs/TDLib
+/TDLib/obj/Debug
+/TDLib/obj/Release
+/GettingTheKeys.pub
