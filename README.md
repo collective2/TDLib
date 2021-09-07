@@ -1,8 +1,6 @@
-This repo contains source code and examples for using the TDAmeritrade API
+This repo contains source code and examples for using the TDAmeritrade API. The library TDLib is written in C# for .net version 4.7.2
 
 The developer web site is located at https://developer.tdameritrade.com/
-
-The library TDLib is written in C# for .net version 4.7.2
 
 Using the API requires 5 different values that you retrieve in different ways. Read the file GettingTheKeys.pdf to see a discussion and walkthrough. Getting all of the keys together requires some patience, different logins and copying and pasting values around. 
 
