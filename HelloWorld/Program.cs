@@ -7,6 +7,10 @@ using TDLib;
 
 namespace HelloWorld
 {
+    /// <summary>
+    /// Basic Hello World program. If this runs and pulls the latest quote for the spy then you will have set up your keys successfully
+    /// in appkeys.json
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
