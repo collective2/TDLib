@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GetAccessToken.cs" />
+    <Compile Include="GetLatestQuotes.cs" />
+    <Compile Include="GetQuoteDataList.cs" />
+    <Compile Include="QuoteData.cs" />
     <Compile Include="TDConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
