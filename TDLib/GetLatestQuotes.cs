@@ -49,7 +49,7 @@ namespace TDLib
             return QuoteDataList;
         }
 
-        private List<QuoteData> Get100Quotes(string tickerList, string authtoken)
+        private List<QuoteData> Get100Quotes(string tickerList, string accesstoken)
         {
             List<QuoteData> QuoteDataList;
 
@@ -57,7 +57,7 @@ namespace TDLib
 
             using (WebClient client = new WebClient())
             {
-                client.Headers.Add("Authorization", $"Bearer {authtoken}");
+                client.Headers.Add("Authorization", $"Bearer {accesstoken}");
                 try
                 {
                     byte[] result = client.DownloadData(url);

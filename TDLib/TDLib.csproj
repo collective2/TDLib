@@ -70,12 +70,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Candle.cs" />
+    <Compile Include="GetCandleList.cs" />
+    <Compile Include="GetDailyQuotes.cs" />
+    <Compile Include="GetFifteenMinuteQuotes.cs" />
+    <Compile Include="GetFiveMinuteQuotes.cs" />
+    <Compile Include="Get30MinuteQuotes.cs" />
+    <Compile Include="Json\JsonObjectBuilder.cs" />
+    <Compile Include="OptionManager\Constructor.cs" />
+    <Compile Include="OptionManager\GetChain.cs" />
+    <Compile Include="OptionManager\GetSpread.cs" />
+    <Compile Include="OptionManager\OptionChainModel\DateAndStrikeModel.cs" />
+    <Compile Include="OptionManager\OptionChainModel\ExpirationDateMap.cs" />
+    <Compile Include="OptionManager\OptionChainModel\OptionBidAsk.cs" />
+    <Compile Include="OptionManager\OptionChainModel\OptionChainModel.cs" />
+    <Compile Include="OptionManager\OptionChainModel\StrikeAndOptions.cs" />
+    <Compile Include="OptionManager\OptionChainModel\stub.cs" />
+    <Compile Include="OptionManager\OptionSpreadModel\OptionSpreadModel.cs" />
+    <Compile Include="OptionManager\OptionTickerDetails.cs" />
+    <Compile Include="OptionManager\Properties.cs" />
+    <Compile Include="PlaceTrade.cs" />
+    <Compile Include="Trade\CashEquivalent.cs" />
+    <Compile Include="Trade\EquityModel.cs" />
+    <Compile Include="Trade\ExecutionModel.cs" />
+    <Compile Include="Trade\FixedIncomeModel.cs" />
     <Compile Include="GetAccessToken.cs" />
     <Compile Include="GetLatestQuotes.cs" />
     <Compile Include="GetQuoteDataList.cs" />
+    <Compile Include="Trade\MutualFundModel.cs" />
+    <Compile Include="Trade\OptionModel.cs" />
+    <Compile Include="Trade\PendingOrderModel.cs" />
+    <Compile Include="Trade\PlaceOrderModel.cs" />
+    <Compile Include="PositionModel.cs" />
     <Compile Include="QuoteData.cs" />
     <Compile Include="TDConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trade\TradeBase.Properties.cs" />
+    <Compile Include="Trade\TradeBase.Types.cs" />
+    <Compile Include="Trade\TradeLimit.cs" />
+    <Compile Include="Trade\TradeMarket.cs" />
+    <Compile Include="Trade\TradeOTA.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
