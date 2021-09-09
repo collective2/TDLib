@@ -75,6 +75,9 @@ namespace TradingExamples
             jsonOrder = TradeOTA.BuyThenSell("SPY", 1, 300.0M, 40); // prepare the order. Sell 40 cents higher than the buy
             oTDA.PlaceTrade(accesstoken, jsonOrder);                // place the trade
 
+            /*
+             * This is a sell, then buy order. One the sell has filled a buy order is placed
+             */
             jsonOrder = TradeOTA.SellThenBuy("SPY", 1, 300.0M, 40); // prepare the order. buy 40 cents lower than the sell order
             oTDA.PlaceTrade(accesstoken, jsonOrder);                // place the trade
 
