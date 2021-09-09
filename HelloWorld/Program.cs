@@ -10,6 +10,7 @@ namespace HelloWorld
     /// <summary>
     /// Basic Hello World program. If this runs and pulls the latest quote for the spy then you will have set up your keys successfully
     /// in appkeys.json
+    /// Read the file GettingTheKeys.pdf to learn how to retrieve the various values you will need.
     /// </summary>
     class Program
     {
