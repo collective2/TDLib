@@ -1,5 +1,6 @@
 ﻿{
   "ConsumerKey": "30 or so alphanumeric chars, like GO4KDIOEPROGJKI7IDHDJGKKKDJ3",
   "AccountNumber": "9 digits, like 0496746365",
-  "refresh_token": "900+ characters like qBD/gkjNP9Exvifft3+xQLMFfPelHI8CBD1TYlyKcfzvNDK"
+  "refresh_token": "900+ characters like qBD/gkjNP9Exvifft3+xQLMFfPelHI8CBD1TYlyKcfzvNDK",
+  "Collective2APIKey": "Vakue assigned from Collective2"
 }
