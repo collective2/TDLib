@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using TDLib;
@@ -22,8 +23,14 @@ namespace TradingExamples
     /// </summary>
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+
+            Program p = new Program();
+
+            await Run();
+
+#if false
             TDConnection oTDA = new TDConnection();
 
             /*
@@ -35,7 +42,7 @@ namespace TradingExamples
              * Buy 1 share of SPY at market
              */
             string jsonOrder = TradeMarket.BuyMarket("SPY", 1);     // prepare the order
-            oTDA.PlaceTrade(accesstoken, jsonOrder);                // place the trade
+            await oTDA.PostTrade(accesstoken, jsonOrder);                // place the trade
             /*
              * Sell 1 share of SPY at market. If you are not already long then this will open a short; there is no
              * distinction in the API between being long or short, you buy or you sell. TDA knows that you are opening or closing
@@ -80,7 +87,29 @@ namespace TradingExamples
              */
             jsonOrder = TradeOTA.SellThenBuy("SPY", 1, 300.0M, 40); // prepare the order. buy 40 cents lower than the sell order
             oTDA.PlaceTrade(accesstoken, jsonOrder);                // place the trade
-
+#endif
         }
+
+        public static async Task Run()
+        {
+            TDConnection oTDA = new TDConnection();
+
+            var ss = oTDA.GetSubscribedStrategies();
+
+            var act = oTDA.GetStrategyActiveOrders("137431886");
+
+            /*
+             * Get an access token. This is good for 30 minutes
+             */
+            string accesstoken = oTDA.GetAccessToken();
+            /*
+             * Buy 1 share of SPY at market
+             */
+            string jsonOrder = TradeMarket.BuyMarket("SPY", 1);     // prepare the order
+            await oTDA.PostTrade(accesstoken, jsonOrder);                // place the trade
+            
+        }
+
+    
     }
 }

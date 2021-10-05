@@ -23,8 +23,8 @@ namespace TDLib
 
             NameValueCollection values = new NameValueCollection();
             values.Add("grant_type", "refresh_token");
-            values.Add("refresh_token", refresh_token);     // this is the 90 day key
-            values.Add("client_id", ConsumerKey);           // this is API key, retrieved by logging into the developer site
+            values.Add("refresh_token", AppKeys.refresh_token);     // this is the 90 day key
+            values.Add("client_id", AppKeys.ConsumerKey);           // this is API key, retrieved by logging into the developer site
             string Url = "https://api.tdameritrade.com/v1/oauth2/token";
 
             using (WebClient client = new WebClient())

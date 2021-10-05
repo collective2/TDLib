@@ -70,7 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppKeysModel.cs" />
     <Compile Include="Candle.cs" />
+    <Compile Include="Collective2\GetStrategyActiveOrders.cs" />
+    <Compile Include="Collective2\ModelCommon.cs" />
+    <Compile Include="Collective2\GetStrategyOpenPositions.cs" />
+    <Compile Include="Collective2\GetSubscribedStrategies.cs" />
     <Compile Include="GetCandleList.cs" />
     <Compile Include="GetDailyQuotes.cs" />
     <Compile Include="GetFifteenMinuteQuotes.cs" />

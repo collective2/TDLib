@@ -22,7 +22,7 @@ namespace TDLib
             var startms = (DateTime.Today.AddDays(-daysback) - epoch).TotalMilliseconds;
             var endms = (DateTime.Today.AddDays(1) - epoch).TotalMilliseconds;
 
-            string url = $"https://api.tdameritrade.com/v1/marketdata/{ticker}/pricehistory?apikey={ConsumerKey}&periodType=day&frequencyType=minute&frequency=15&startDate={startms}&endDate={endms}";
+            string url = $"https://api.tdameritrade.com/v1/marketdata/{ticker}/pricehistory?apikey={AppKeys.ConsumerKey}&periodType=day&frequencyType=minute&frequency=15&startDate={startms}&endDate={endms}";
 
             using (WebClient client = new WebClient())
             {

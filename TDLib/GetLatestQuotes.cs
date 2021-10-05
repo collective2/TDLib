@@ -53,7 +53,7 @@ namespace TDLib
         {
             List<QuoteData> QuoteDataList;
 
-            string url = $"https://api.tdameritrade.com/v1/marketdata/quotes?apikey={ConsumerKey}&symbol={tickerList}";
+            string url = $"https://api.tdameritrade.com/v1/marketdata/quotes?apikey={AppKeys.ConsumerKey}&symbol={tickerList}";
 
             using (WebClient client = new WebClient())
             {
