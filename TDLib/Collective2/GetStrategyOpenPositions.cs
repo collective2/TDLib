@@ -3,26 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ServiceStack;
 
 namespace TDLib.Collective2
 {
 
-    public class GetStrategyOpenPositionsModel
+    public class GetStrategyOpenPositions: ResponseBase<GetStrategyOpenPositionsResponse>
     {
-        public OPResult[] Results { get; set; }
-        public Responsestatus ResponseStatus { get; set; }
+		[ApiMember(Description = @"The Strategy ID", IsRequired = true)]
+        public long? StrategyId { get; set; }
+
+
+        [ApiMember(Description = "(Optional) AssetClass filter. e.g. 'stock', 'option', 'future', 'forex', 'crypto'")]
+        public string AssetClass { get; set; }
     }
 
-
-    public class OPResult
+	[ApiResponse(Description = "The list of open positions for the strategy")]
+    public class GetStrategyOpenPositionsResponse : ResponseBase<PositionDTO>
     {
-        public int StrategyId { get; set; }
-        public string Currency { get; set; }
-        public int Quantity { get; set; }
-        public DateTime OpenedDate { get; set; }
-        public int AvgPx { get; set; }
-        public C2symbol C2Symbol { get; set; }
-        public Exchangesymbol ExchangeSymbol { get; set; }
+    }
+
+    public class PositionDTO
+    {
+        [ApiMember(Description = "The C2 StrategyId")]
+        public long StrategyId { get; set; }
+
+
+		[ApiMember(Description = "The 3-character ISO instrument currency. E.g. 'USD'")]
+		public string Currency { get; set; }
+
+
+		[ApiMember(Description = "The net position quantity. Short positions will be negative.")]
+		public decimal Quantity { get; set; }
+
+
+		[ApiMember(Description = "UTC DateTime when the position was opened")]
+		public DateTime OpenedDate { get; set; }
+
+		
+		[ApiMember(Description = "The position average price")]
+		public decimal AvgPx { get; set; }
+
+
+		[ApiMember(Description = "The C2 symbol group")]
+		public C2symbol C2Symbol { get; set; } = new C2symbol();
+
+
+		[ApiMember(Description = "The exchange symbol group")]
+		public Exchangesymbol ExchangeSymbol { get; set; } = new Exchangesymbol();
     }
 
 

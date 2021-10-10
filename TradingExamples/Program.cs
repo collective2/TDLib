@@ -94,9 +94,9 @@ namespace TradingExamples
         {
             TDConnection oTDA = new TDConnection();
 
-            var ss = oTDA.GetSubscribedStrategies();
+            var ss = oTDA.GetSubscribedStrategies(137431886);
 
-            var act = oTDA.GetStrategyActiveOrders("137431886");
+            var act = oTDA.GetStrategyActiveOrders(137431886);
 
             /*
              * Get an access token. This is good for 30 minutes
