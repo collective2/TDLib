@@ -11,7 +11,7 @@ namespace TDLib.Collective2
     {
         public static IServiceClient CreateClient(string collective2APIKey)
         {
-            IServiceClient client = new JsonServiceClient(@"https://api4.collective2.com").WithCache();
+            IServiceClient client = new JsonServiceClient(@"https://api4-general.collective2.com").WithCache();
             client.AddHeader("Accept", "application/json");
             client.AddHeader("Authorization", $"Bearer {collective2APIKey}");
             return client;
